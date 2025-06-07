@@ -1,12 +1,36 @@
-# React + Vite
+⚽ SOCCER MANAGER - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es el frontend de SOCCER MANAGER y está diseñado para consumir la api del backend que puedes encontrar [aquí](https://github.com/SergioPG92/Backend_Api).
 
-Currently, two official plugins are available:
+📦 Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Asegúrate de tener instalados:
+```
 
-## Expanding the ESLint configuration
+- Node.js
+- Npm o yarn 
+```
+⚙️ Instalación del proyecto
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.Clonar el repositorio
+```bash
+git clone https://github.com/SergioPG92/FrontEnd_Soccer_Manager.git
+cd ruta_del_proyecto
+```
+2.Instalar dependencias
+```
+npm install  --Si usas npm
+yarn -- Si usas yarn
+```
+
+3.Configurar variables de entorno
+```
+VITE_API_URL=  Ruta del proyecto backend/api.
+```
+
+4.Construcción para producción
+```
+npm run build --Si usas npm
+yarn build --Si usas yarn
+
+```
