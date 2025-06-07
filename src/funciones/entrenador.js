@@ -1,7 +1,7 @@
 import { Navigate } from "react-router-dom";
 
 //Base URL de la API
-const API_URL = "http://api-proyecto.es/api";
+const API_URL = import.meta.env.VITE_API_URL;
 
 // Función para hacer login
 const login = async (email, password) => {
