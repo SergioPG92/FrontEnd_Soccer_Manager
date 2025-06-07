@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fugaz+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --fc-border-color: white;
+  
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html{
+  background-color: #073B3A;
+}
+
+/* Personalizados para tailwind */
+@theme {
+  --color-dark-verdiazul: #073B3A; 
+  --color-dark-verde: #0B6E4F; 
+  --color-verde: #08A045; 
+  --color-light-verde: #6BBF59; 
+  --color-dorado: #DDB771; 
+  
+  
+  --color-dark-verdiazul-opacity: rgba(24, 59, 59, 0.95);
+  --color-verde-opacity: rgb(8, 160, 69,0.8);
+  --color-verde-opacity-2:rgb(11, 155, 59,0.93);
+  --color-dark-verde-opacity:rgb(11, 110, 79,0.8);
+  --color-dark-verde-opacity-minima:rgb(11, 110, 79,0.93);
+
+  --font-fuente1: "Bebas Neue", sans-serif;
+  --font-fuente2: "Roboto", sans-serif;
+  --font-fuente3: "Orbitron", sans-serif;
+}
+
+/* Estilos del calendario */
+
+/* Fondo del día actual */
+.fc-day-today {
+  background-color: #0B6E4F !important; 
+  color: white !important; 
+  font-weight: bold;
+}
+
+/* Cabecera de la tabla (nombre de días) */
+.fc-col-header-cell {
+  background-color: #0B6E4F; 
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+}
+
+/* Título del calendario */
+.fc-toolbar-title {
+  font-size: 1.5rem;      
+  color: #073B3A;           
+  text-transform: capitalize; 
+  font-weight: bold;  
+  font-family: var(--font-fuente3);
+}
+
+/* Estilo personalizado, para las sesiones. */
+@media (max-width: 388px) {
+  .fc-event-custom-title {
+    font-size: 0.3rem; 
+  }
+}
+
+@media (min-width: 389px) and (max-width: 550px) {
+  .fc-event-custom-title {
+    font-size: 0.40rem; 
+  }
+}
+
+@media (min-width: 551px) and (max-width: 750px) {
+  .fc-event-custom-title {
+    font-size: 0.6rem; 
+  }
+}
+
+@media (min-width: 751px) {
+  .fc-event-custom-title {
+    font-size: 0.9rem; 
+  }
+}
+
+.filaSeleccionada{
+  background-color: #DDB771;
+  color: #073B3A;
+}
