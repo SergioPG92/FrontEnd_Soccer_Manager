@@ -1,4 +1,4 @@
-const API_URL = "http://api-proyecto.es/api";
+const API_URL = import.meta.env.VITE_API_URL;
 
 // Función para crear un jugador, recibiendo el id del equipo para asociarlo a él.
 const crearJugador = async (nombre, apellido, posicion, edad, equipo) => {
