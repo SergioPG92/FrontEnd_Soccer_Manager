@@ -194,8 +194,11 @@ const ContenedorJugadores = ({ onSeleccionarJugador, jugadorSeleccionado }) => {
             </tbody>
           </table>
         </div>
-        <div className="text-gray-100 font-fuente2 text-sm pt-2 pl-2 bg-dark-verdiazul-opacity p-2 rounded mt-2 w-70">
-          <span className="font-bold">•Ver participaciones:</span> Haz click en la fila del jugador correspondiente.
+        <div className="grid grid-cols-12 gap-4">
+          <div className="col-span-7 text-gray-100 font-fuente2 text-sm pt-2 pl-2 bg-dark-verdiazul-opacity p-2 rounded mt-2">
+            <span className="font-bold">• Ver participaciones:</span> Haz click
+            en la fila del jugador correspondiente.
+          </div>
         </div>
         <div className="mt-8 max-w-md mx-auto">
           <form
