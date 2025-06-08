@@ -56,7 +56,7 @@ function BarraNavegacion() {
                 <button className="p-0  bg-transprent border-none w-15 ">
                   <img
                     src="/imagenes/logo_web_2.svg"
-                    alt="Logo UV"
+                    alt="Logo Web"
                     className="w-24 h-auto"
                   />
                 </button>
