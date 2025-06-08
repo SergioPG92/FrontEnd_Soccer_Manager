@@ -106,7 +106,7 @@ function BarraNavegacion() {
               >
                 <img
                   src="/imagenes/logo_usuario_temporal.svg"
-                  alt="User Icon"
+                  alt="Icono usuario"
                   className="w-10 h-auto mr-2"
                 />
                 <span>{user.ent_nombre}</span>
@@ -153,7 +153,7 @@ function BarraNavegacion() {
               >
                 <img
                   src="/imagenes/logo_web_2.svg"
-                  alt="Logo UV"
+                  alt="Logo web"
                   className="w-15 h-auto mt-2"
                 />
               </button>
@@ -166,7 +166,7 @@ function BarraNavegacion() {
               >
                 <img
                   src="/imagenes/logo_usuario_temporal.svg"
-                  alt="User Icon"
+                  alt="Icono usuario"
                   className="w-10 h-auto mr-2"
                 />
                 <span>{user.ent_nombre}</span>
