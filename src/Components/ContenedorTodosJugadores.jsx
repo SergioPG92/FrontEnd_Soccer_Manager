@@ -49,14 +49,14 @@ function ContenedorTodosJugadores() {
                 <th className="px-2 py-1 md:px-4 md:py-2">Nombre</th>
                 <th className="px-2 py-1 md:px-4 md:py-2">Apellido</th>
                 <th className="px-2 py-1 md:px-4 md:py-2">Posición</th>
-                <th className="px-2 py-1 md:px-4 md:py-2">Edad</th>
-                <th className="px-2 py-1 md:px-4 md:py-2">Estado</th>
+                <th className="hidden md:table-cell px-2 py-1 md:px-4 md:py-2">Edad</th>
+                <th className="hidden md:table-cell px-2 py-1 md:px-4 md:py-2">Estado</th>
                 {jugadores && (
                   <>
-                    <th className="hidden md:table-cell px-2 py-1 md:px-4 md:py-2">
+                    <th className="px-2 py-1 md:px-4 md:py-2">
                       Equipo
                     </th>
-                    <th className="hidden md:table-cell px-2 py-1 md:px-4 md:py-2">
+                    <th className=" px-2 py-1 md:px-4 md:py-2">
                       Nota Media
                     </th>
                   </>
@@ -86,10 +86,10 @@ function ContenedorTodosJugadores() {
                     <td className="px-2 py-1 md:px-4 md:py-2 font-semibold">
                       {jugador.jug_posicion}
                     </td>
-                    <td className="px-2 py-1 md:px-4 md:py-2 font-semibold">
+                    <td className="hidden md:table-cell px-2 py-1 md:px-4 md:py-2 font-semibold">
                       {jugador.jug_edad}
                     </td>
-                    <td className="px-2 py-1 md:px-4 md:py-2 font-semibold">
+                    <td className="hidden md:table-cell px-2 py-1 md:px-4 md:py-2 font-semibold">
                       <div className="flex justify-between items-center w-full px-2">
                         {jugador.jug_estado === "Disponible" ? (
                           <img
@@ -115,7 +115,7 @@ function ContenedorTodosJugadores() {
                     </td>
 
                     <td
-                      className="hidden md:table-cell px-2 py-1 md:px-4 md:py-2 font-semibold cursor-pointer hover:text-dark-verdiazul transition"
+                      className="px-2 py-1 md:px-4 md:py-2 font-semibold cursor-pointer hover:text-dark-verdiazul transition"
                       onClick={() =>
                         navigate(
                           `/equipo/${jugador.equipo.equ_id}/${jugador.equipo.equ_nombre}`
@@ -124,7 +124,7 @@ function ContenedorTodosJugadores() {
                     >
                       {jugador.equipo.equ_nombre}
                     </td>
-                    <td className="hidden md:table-cell px-2 py-1 md:px-4 md:py-2 font-semibold">
+                    <td className="px-2 py-1 md:px-4 md:py-2 font-semibold">
                       {jugador.participaciones.length > 0
                         ? (
                           /*  Si existe participaciones para el jugador:
