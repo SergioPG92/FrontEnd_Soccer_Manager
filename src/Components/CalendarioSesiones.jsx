@@ -183,12 +183,20 @@ const CalendarioSesiones = () => {
             );
           }}
         />
-    <div className="text-gray-100 font-fuente2 text-sm pt-2 pl-2 bg-dark-verdiazul-opacity p-2 rounded mt-2 w-120">
-          <span className="font-bold">•Crear sesión:</span> Haz click en un cuadro de fecha, selecciona el tipo de entrenamiento y presiona 'Crear'.
-          <br/>
-          <span className="font-bold">•Editar fecha de sesión:</span> Arrastra tu sesión a la casilla de la nueva fecha o haz click en la sesión, selecciona
-          la nueva fecha y presiona 'Guardar'.<br/>
-          <span className="font-bold">•Eliminar sesión:</span> Haz click en la sesión y presiona el botón 'Eliminar', confirma el mensaje de alerta.
+        <div className="grid grid-cols-12 gap-4">
+          <div className="col-span-8 text-gray-100 font-fuente2 text-sm pt-2 pl-2 bg-dark-verdiazul-opacity p-2 rounded mt-2">
+            <span className="font-bold">• Crear sesión:</span> Haz click en un
+            cuadro de fecha, selecciona el tipo de entrenamiento y presiona
+            'Crear'.
+            <br />
+            <span className="font-bold">• Editar fecha de sesión:</span>{" "}
+            Arrastra tu sesión a la casilla de la nueva fecha o haz click en la
+            sesión, selecciona la nueva fecha y presiona 'Guardar'.
+            <br />
+            <span className="font-bold">• Eliminar sesión:</span> Haz click en
+            la sesión y presiona el botón 'Eliminar', confirma el mensaje de
+            alerta.
+          </div>
         </div>
 {/* Modal para crear una nueva sesión de entrenamiento. Se le pasan las props necesarias para que se muestre correctamente:
           Visible: La variable enviada se comprobará en el componente modal para que, si es true, se muestre, y si es false, no.
