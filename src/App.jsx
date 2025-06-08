@@ -13,6 +13,8 @@ import JugadoresPage from './paginas/JugadoresPage';
 import EntrenamientosPage from './paginas/EntrenamientosPage';
 
 function App() {
+
+  document.title= 'Soccer Manager';
   return (
     /* Declaración de las rutas y al componente que llaman con react-router */
     <BrowserRouter>
