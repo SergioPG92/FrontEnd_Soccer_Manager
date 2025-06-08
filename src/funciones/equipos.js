@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL+'/api';
+const API_URL = import.meta.env.VITE_API_URL+'api';
 
 // Función para crear un nuevo equipo, recibiendo el id del entrenador para asociarlo a él.
 const crearEquipo = async (nombre, entrenador) => {
