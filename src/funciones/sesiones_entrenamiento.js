@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL+'/api';
 
 // Función para crear una sesión de entrenamiento, recibiendo el id del equipo para asociarlo a él, la fecha y el tipo de sesión.
 const crearSesion = async (fecha, tipo, equipo) => {
