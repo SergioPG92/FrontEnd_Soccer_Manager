@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL+'/api';
 
 // Función para crear una participación, recibiendo el id del jugador, el id de la sesión y la nota de la participación.
 const crearParticipacion = async (jugador, sesion, nota) => {
