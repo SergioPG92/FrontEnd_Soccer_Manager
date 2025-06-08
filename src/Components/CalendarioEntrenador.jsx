@@ -109,10 +109,10 @@ const CalendarioEntrenador = () => {
 
             return (
               <div>
-                <div>
+                <div className="fc-event-custom-title">
                   <strong>{title}</strong>
                 </div>
-                <div>{extendedProps.equipo}</div>
+                <div className="fc-event-custom-title">{extendedProps.equipo}</div>
               </div>
             );
           }}
