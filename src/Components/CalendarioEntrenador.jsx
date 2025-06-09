@@ -27,7 +27,6 @@ const CalendarioEntrenador = () => {
     }
   };
 
-
   /* Al renderizarse el componente por primera vez se consigue el userData del localstorage. Si existe, se le asigna a EntrenadorId el ent_id del entrenador. */
   useEffect(() => {
     let userData = JSON.parse(localStorage.getItem("userData"));
@@ -72,6 +71,19 @@ const CalendarioEntrenador = () => {
     return () => document.removeEventListener("click", handleClickFuera);
   }, []);
 
+    //Función para saber si la pantalla es menor a 768px (md). De ser así, las flechas del calendario aparecen a la izquierda.
+
+  const [pantallaMd, setPantallaMd] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handlePantallaSize = () => {
+      setPantallaMd(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handlePantallaSize);
+    return () => window.removeEventListener("resize", handlePantallaSize);
+  }, []);
+
   return (
     <div className="bg-[url(/imagenes/fondo/fondo_participaciones-calendario.jpg)] bg-cover bg-center bg-no-repeat rounded-2xl">
       <div className="bg-verde-opacity-2 rounded-2xl shadow p-4 sm:p-6 lg:p-8 min-h-[86vh] overflow-x-auto">
@@ -103,7 +115,12 @@ const CalendarioEntrenador = () => {
           editable={false}
           droppable={false}
           eventClick={handleClickEnSesion}
-          height="auto" 
+          height="auto"
+          headerToolbar={{
+            left: pantallaMd ? "prev,next" : "",
+            center: "title",
+            right: pantallaMd ? "today" : "today,prev,next",
+          }}
           eventContent={(e) => {
             const { title, extendedProps } = e.event;
 
@@ -112,7 +129,9 @@ const CalendarioEntrenador = () => {
                 <div className="fc-event-custom-title">
                   <strong>{title}</strong>
                 </div>
-                <div className="fc-event-custom-title">{extendedProps.equipo}</div>
+                <div className="fc-event-custom-title">
+                  {extendedProps.equipo}
+                </div>
               </div>
             );
           }}
