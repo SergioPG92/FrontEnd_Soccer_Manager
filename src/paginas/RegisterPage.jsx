@@ -18,12 +18,17 @@ function RegisterPage() {
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    if (password !== passwordConfirm) {
-      alert("Las contraseñas no coinciden");
+    if (nombre == "" || apellido == "" || email == "" || password == "") {
+      alert("Debes completas todos los campos del formulario.");
       return;
-    } else if (password.length < 6 || passwordConfirm.length < 6) {
-      alert("La contraseña debe tener al menos 6 caracteres");
-      return;
+    } else {
+      if (password !== passwordConfirm) {
+        alert("Las contraseñas no coinciden");
+        return;
+      } else if (password.length < 6 || passwordConfirm.length < 6) {
+        alert("La contraseña debe tener al menos 6 caracteres");
+        return;
+      }
     }
 
     // Llamada a la función de registro
