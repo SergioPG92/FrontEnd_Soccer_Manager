@@ -38,6 +38,21 @@ function BarraNavegacion() {
       ) {
         setDesplegableAbierto(false);
       }
+
+      if (
+        referenciaDesplegablePantallaPeq.current &&
+        !referenciaDesplegablePantallaPeq.current.contains(event.target)
+      ) {
+        setDesplegableAbiertoPantallaPeq(false);
+      }
+
+      if (
+        referenciaDesplegableResponsive.current &&
+        !referenciaDesplegableResponsive.current.contains(event.target)
+      ) {
+        setDesplegableResponsiveAbierto(false);
+      }
+
     };
     /* Se añade a todo el documento un evento que al hacer click con el ratón se llame a la comprobación de si el click es fuera del desplegable. */
     document.addEventListener("mousedown", handleClickFuera);
@@ -56,7 +71,7 @@ function BarraNavegacion() {
                 <button className="p-0  bg-transprent border-none w-15 ">
                   <img
                     src="/imagenes/logo_web_2.svg"
-                    alt="Logo Web"
+                    alt="Logo web"
                     className="w-24 h-auto"
                   />
                 </button>
