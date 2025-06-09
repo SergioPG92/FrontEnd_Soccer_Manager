@@ -94,3 +94,10 @@ html{
   background-color: #DDB771;
   color: #073B3A;
 }
+
+hr.solid {
+  border: 0;
+  width: 65%;               
+  background-color:#6BBF59;
+  height: 1px;
+}
