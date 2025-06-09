@@ -142,6 +142,20 @@ const CalendarioSesiones = () => {
     };
   }, []);
 
+  //Función para saber si la pantalla es menor a 768px (md). De ser así, las flechas del calendario aparecen a la izquierda.
+
+  
+  const [pantallaMd, setPantallaMd] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handlePantallaSize = () => {
+      setPantallaMd(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handlePantallaSize);
+    return () => window.removeEventListener("resize", handlePantallaSize);
+  }, []);
+
   return (
     <div className="bg-[url(/imagenes/fondo/fondo_participaciones-calendario.jpg)] bg-cover bg-center bg-no-repeat rounded-2xl">
       <div className=" bg-verde-opacity-2 rounded-2xl shadow p-4 sm:p-6 lg:p-8  min-h-[86vh]">
@@ -174,6 +188,11 @@ const CalendarioSesiones = () => {
           dateClick={handleDateClick}
           eventClick={handleClickEnSesion}
           eventDrop={handleMoverSesion}
+          headerToolbar={{
+            left: pantallaMd ? "prev,next" : '',
+            center: "title",
+            right: pantallaMd ? 'today':'today,prev,next'
+          }}
           eventContent={(e) => {
             const { title } = e.event;
             return (
@@ -198,7 +217,8 @@ const CalendarioSesiones = () => {
             alerta.
           </div>
         </div>
-{/* Modal para crear una nueva sesión de entrenamiento. Se le pasan las props necesarias para que se muestre correctamente:
+
+        {/* Modal para crear una nueva sesión de entrenamiento. Se le pasan las props necesarias para que se muestre correctamente:
           Visible: La variable enviada se comprobará en el componente modal para que, si es true, se muestre, y si es false, no.
           Posicion: Se le pasa la posición del click para que en el componente se pueda calcular dónde mostrarse la modal (si hiciera falta)
           Fecha: Fecha que tendrá la nueva sesión.
