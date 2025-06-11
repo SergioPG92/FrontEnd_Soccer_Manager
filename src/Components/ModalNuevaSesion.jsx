@@ -108,11 +108,11 @@ const ModalNuevaSesion = ({
       <div className="flex justify-end space-x-2">
         <button
           onClick={handleCrear}
-          className="px-2 py-1 bg-blue-600 text-white rounded"
+          className="px-2 py-1 bg-blue-600 text-white rounded cursor-pointer"
         >
           Crear
         </button>
-        <button onClick={onClose} className="px-2 py-1 bg-gray-300 rounded">
+        <button onClick={onClose} className="px-2 py-1 bg-gray-300 rounded cursor-pointer">
           Cancelar
         </button>
       </div>
