@@ -90,7 +90,7 @@ function ContenedorTodosJugadores() {
                       {jugador.jug_edad}
                     </td>
                     <td className="hidden md:table-cell px-2 py-1 md:px-4 md:py-2 font-semibold">
-                      <div className="flex justify-between items-center w-full px-2">
+                      <div className="flex justify-center items-center w-full px-2">
                         {jugador.jug_estado === "Disponible" ? (
                           <img
                             src="/imagenes/jug_disponible.svg"
@@ -110,7 +110,7 @@ function ContenedorTodosJugadores() {
                             className="w-6 h-6"
                           />
                         )}
-                        <span>{jugador.jug_estado}</span>
+                        <span className="ml-2">{jugador.jug_estado}</span>
                       </div>
                     </td>
 
