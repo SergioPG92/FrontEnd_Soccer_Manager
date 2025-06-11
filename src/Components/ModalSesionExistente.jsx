@@ -86,20 +86,20 @@ const ModalSesionExistente = ({
         >
           <button
             type="submit"
-            className="px-2 py-1 bg-blue-600 text-white rounded"
+            className="px-2 py-1 bg-blue-600 text-white rounded cursor-pointer"
           >
             Guardar
           </button>
           <button
             type="button"
-            className="text-black px-2 py-1 bg-gray-300 rounded"
+            className="text-black px-2 py-1 bg-gray-300 rounded cursor-pointer"
             onClick={onClose}
           >
             Cancelar
           </button>
           <button
             type="button"
-            className="px-2 py-1 bg-red-600 text-white rounded"
+            className="px-2 py-1 bg-red-600 text-white rounded cursor-pointer"
             /* Al hacer click en el botón de eliminar, se llama a la función onEliminar (definida por el componente padre) y se le pasa el id de la sesión */
             onClick={() => onEliminar(sesion.id)}
           >
