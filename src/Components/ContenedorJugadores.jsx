@@ -175,7 +175,7 @@ const ContenedorJugadores = ({ onSeleccionarJugador, jugadorSeleccionado }) => {
                           `/perfilJugador/${equipoNombre}/${jugador.jug_id}`
                         );
                       }}
-                      className="my-1 bg-dark-verdiazul text-white px-2 sm:px-3 py-1 rounded mr-1 hover:bg-blue-600 text-xs sm:text-sm"
+                      className="my-1 bg-dark-verdiazul text-white px-2 sm:px-3 py-1 rounded mr-1 hover:bg-blue-600 text-xs sm:text-sm cursor-pointer"
                     >
                       Ver Perfil
                     </button>
@@ -184,7 +184,7 @@ const ContenedorJugadores = ({ onSeleccionarJugador, jugadorSeleccionado }) => {
                         e.stopPropagation();
                         handleEliminarJugador(jugador.jug_id);
                       }}
-                      className="my-1  bg-red-900 text-white px-2 sm:px-3 py-1 rounded hover:bg-red-600 text-xs sm:text-sm"
+                      className="my-1  bg-red-900 text-white px-2 sm:px-3 py-1 rounded hover:bg-red-600 text-xs sm:text-sm cursor-pointer"
                     >
                       Borrar
                     </button>
