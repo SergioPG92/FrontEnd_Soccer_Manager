@@ -86,7 +86,7 @@ const ContenedorEquipos = () => {
                   await eliminarEquipo(equipo.equ_id);
                   await handleVerEquipos();
                 }}
-                className="bg-red-800 text-white p-2 rounded-lg hover:bg-red-600 transition"
+                className="bg-red-800 text-white p-2 rounded-lg hover:bg-red-600 transition cursor-pointer"
               >
                 <img
                   src="/imagenes/icono-eliminar.svg"
