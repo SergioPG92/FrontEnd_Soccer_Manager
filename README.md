@@ -1,14 +1,16 @@
 ⚽ SOCCER MANAGER - Frontend
 
-Este proyecto es el frontend de SOCCER MANAGER y está diseñado para consumir la api del backend que puedes encontrar [aquí](https://github.com/SergioPG92/Backend_Api).
+Este proyecto es el frontend de SOCCER MANAGER y está diseñado para consumir la API del backend que puedes encontrar [aquí](https://github.com/SergioPG92/Backend_Api).
 
 📦 Requisitos
 
 Asegúrate de tener instalados:
+
 ```
 
 - Node.js
 - Npm o yarn 
+
 ```
 ⚙️ Instalación del proyecto
 
